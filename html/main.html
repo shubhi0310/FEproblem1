@@ -1,0 +1,89 @@
+
+<div class="container">
+
+   <div class="heading-left heading-xs pull-left color-coded">
+      <h3>Select planets You want to search in:</h3>
+   </div>
+   <div class="heading-right pull-right color-coded hidden-xs">
+      <h3>Select vehicle You want to ride in: </h3>
+   </div>
+   
+   <div class="row destionationSection destionationSection-xs pull-left">
+	   <div class="col-md-12 col-sm-12 col-xs-12">
+		<select ng-model="dest" ng-options="destination.name for destination in destinations" class="color-brown green-border wide100-xs"></select>
+		 <span ng-show="dest.distance && selectedEntities.length !== MAX_LIMIT">Distance of {{dest.name}}: {{dest.distance}}&nbsp;km	
+		 </span>
+	   </div>
+	   <div class="clearfix">&nbsp;</div>
+	   <div class="col-md-12 col-sm-12 col-xs-12" ng-show="dest.distance">
+		  <span class="red" ng-show="selectedEntities.length === MAX_LIMIT">You can not select more than {{MAX_LIMIT}} destinations. 
+	      </span>
+	   </div>
+   </div>
+   
+   <div class="heading-xs pull-right color-coded hidden visible-xs">
+      <h3>Select vehicle You want to ride in: </h3>
+   </div>
+   
+   <div class="vehicleSection row pull-right hidden-xs">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+		  <select ng-model="veh" ng-options="vehicle.name for vehicle in vehicles" class="color-brown green-border"></select>&nbsp;
+		  <input type="button" value="Add" ng-click="addItem()"
+				 ng-disabled="veh.max_distance < dest.distance || veh.max_distance === undefined || dest.distance === undefined"
+				 class="color-coded button button-xs"/>&nbsp;
+		  <span ng-show="veh.total_no && selectedEntities.length !== MAX_LIMIT">Number of {{veh.name}}: {{veh.total_no}}</span>
+		</div>
+		<div class="clearfix hidden-xs">&nbsp;</div>
+		<div class="col-md-12 col-sm-12 col-xs-12" ng-show="veh.total_no">
+		  <span class="red" ng-show="veh.max_distance < dest.distance && selectedEntities.length !== MAX_LIMIT">
+			{{wrongVehicleError}}
+		  </span>
+		  <span class="red" ng-show="selectedEntities.length === MAX_LIMIT">
+			You can not select more than {{MAX_LIMIT}} vehicles. 
+		  </span>
+		</div>
+   </div>
+   
+   <div class="row vehicle-section-xs pull-right hidden visible-xs">
+		<div class="col-xs-12">
+		  <select ng-model="veh" ng-options="vehicle.name for vehicle in vehicles" class="color-brown green-border wide100-xs"></select>&nbsp;
+		   <span ng-show="veh.total_no && selectedEntities.length !== MAX_LIMIT">Number of {{veh.name}}: {{veh.total_no}}</span>
+		</div>
+		<div class="col-xs-12" ng-show="veh.total_no">
+		  <span class="red" ng-show="veh.max_distance < dest.distance && selectedEntities.length !== MAX_LIMIT">
+			{{wrongVehicleError}}
+		  </span>
+		  <span class="red" ng-show="selectedEntities.length === MAX_LIMIT">
+			You can not select more than {{MAX_LIMIT}} vehicles. 
+		  </span>
+		</div>
+		<div class="col-xs-12">
+		  <input type="button" value="Add" ng-click="addItem()"
+				 ng-disabled="veh.max_distance < dest.distance || veh.max_distance === undefined || dest.distance === undefined"
+				 class="color-coded button button-xs"/>&nbsp;
+		</div>
+   </div>
+   
+   <div class="clearfix">&nbsp;</div>
+   <div class="selected">
+	   <div class="combination combination-xs" ng-repeat="entity in selectedEntities">
+		{{entity.destination.name}} &nbsp; 
+		<input type="button" class="btn btn-link" value="Delete" ng-click="removeItem(entity)"/><br/>
+		by<br/>
+		{{entity.vehicle.name}}
+	   </div>
+   </div>
+   
+   <div class="row result result-xs">
+   		<div class="col-md-6 col-sm-12 col-xs-12">
+   			<input type="button" value="Find Falcone" ng-disabled="selectedEntities.length < MAX_LIMIT" ng-click="findFalcone()" class="color-coded button button-xs pull-left"/>
+   		</div>
+		<div class="col-md-6 col-sm-12 col-xs-12">
+   			<input type="button" value="Reset" ng-click="reset()" class="color-coded button button-xs pull-right"/>
+   		</div>
+   </div>
+   
+</div>
+<div class="overlay" ng-show="loading">
+   <div class="loader"></div>
+</div>

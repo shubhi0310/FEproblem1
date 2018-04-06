@@ -1,0 +1,211 @@
+body{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.hidden{
+	display: none;
+}
+
+.container{
+	margin-top:20px;
+}
+
+.heading-left{
+	width: 50%;
+	float: left;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
+.heading-right{
+	width: 42%;
+	float: left;
+}
+
+.destionationSection{
+	width: 50%;
+	float: left;
+	margin-left: 20px;
+	margin-top:20px;
+}
+
+.vehicleSection{
+	float: left;
+	width: 40%;
+	margin-left:10px;
+	margin-top:20px;
+}
+
+.combination{
+	width: 20%;
+	float: left;
+	display: inline-block;
+	height:150px;
+	margin-left: 20px;
+	padding: 20px;
+	border: 1px solid forestgreen;
+	border-radius: 20px;
+	color: brown;
+}
+
+.result{
+	position:fixed;
+	margin-left:400px;
+	bottom:190px;
+	
+}
+
+.green-border{
+	border: 1px solid forestgreen;
+}
+.selected{
+	margin-top: 20px;
+}
+.red{
+	color: red;
+}
+
+.color-green{
+	color: green;
+}
+
+.color-brown{
+	color:brown;
+}
+
+span{
+	color: brown;
+}
+
+.button{
+	border: 1px solid forestgreen;
+	border-radius: 8px;
+	background-color: white;
+}
+.color-coded{
+	color: forestgreen;
+}
+
+input.color-coded.button.button-xs:disabled {
+    background-color: lightgray;
+    color: white;
+}
+
+.bold{
+	font-weight: bolder;
+}
+.margin-top-60{
+	margin-top: 60px;
+}
+
+.resultSection{
+	margin-top:120px;
+	margin-left: 200px;
+}
+
+.margin-left-300{
+	margin-left: 300px;
+}
+.start-again-btn{
+	margin-left: 500px;
+	margin-top:50px;
+}
+
+.overlay {
+    background: #e9e9e9;       
+    position: absolute;  
+    top: 0;                  
+    right: 0;                
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
+  margin-left:600px;
+  margin-top:200px;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+	 0% { -webkit-transform: rotate(0deg); }
+	 100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+@media only screen and (max-width: 500px) {
+	
+	.visible-xs{
+		display: block;
+	}
+	
+	.hidden-xs{
+		display: none;
+	}
+	.destionationSection-xs{
+		width:100%;
+		margin-left:0px;
+		margin-top:0px;
+	}
+
+	.heading-xs{
+		display: block;
+		width: 100%;
+		margin-left: 0px;
+	}
+	
+	.wide100-xs{
+		width: 100%;
+	}
+
+	.vehicle-section-xs{
+		width: 100%; !important;
+		margin-left: 0px;
+	}
+	
+	.button-xs{
+		width: 100%;
+		margin-left:0px;
+		margin-top:10px;
+	}
+	
+	.combination-xs{
+		width: 100%;
+		float: left;
+		display: inline-block;
+		height:150px;
+		padding: 20px;
+		border: 1px solid forestgreen;
+		border-radius: 20px;
+		color: brown;
+		margin-left: 0px;
+		margin-top: 10px;
+	}
+
+	.result-xs{
+		margin-left: 0px;
+		position: relative;
+		display: block;
+		width: 100%;
+		bottom: auto;
+		margin-top: 20px;
+	}
+	.margin-20-xs{
+		margin:20px;
+	}
+
+    
+}
