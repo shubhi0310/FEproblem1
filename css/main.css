@@ -49,8 +49,9 @@ body{
 }
 
 .result{
+	width:100%;
 	position:fixed;
-	margin-left:400px;
+	margin-left:0px;
 	bottom:190px;
 	
 }
@@ -159,6 +160,10 @@ input.color-coded.button.button-xs:disabled {
 		width:100%;
 		margin-left:0px;
 		margin-top:0px;
+	}
+
+	.select-xs{
+		margin-left: -15px;
 	}
 
 	.heading-xs{

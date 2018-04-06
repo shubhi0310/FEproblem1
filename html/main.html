@@ -10,7 +10,7 @@
    
    <div class="row destionationSection destionationSection-xs pull-left">
 	   <div class="col-md-12 col-sm-12 col-xs-12">
-		<select ng-model="dest" ng-options="destination.name for destination in destinations" class="color-brown green-border wide100-xs"></select>
+		<select ng-model="dest" ng-options="destination.name for destination in destinations" class="color-brown green-border wide100-xs select-xs"></select>
 		 <span ng-show="dest.distance && selectedEntities.length !== MAX_LIMIT">Distance of {{dest.name}}: {{dest.distance}}&nbsp;km	
 		 </span>
 	   </div>
@@ -75,10 +75,13 @@
    </div>
    
    <div class="row result result-xs">
-   		<div class="col-md-6 col-sm-12 col-xs-12">
+   	    <div class="col-md-3 col-sm-12 col-xs-12">
+   	    	<span>Time Taken: {{timeTaken}}</span>
+   	    </div>
+   		<div class="col-md-1 col-sm-12 col-xs-12">
    			<input type="button" value="Find Falcone" ng-disabled="selectedEntities.length < MAX_LIMIT" ng-click="findFalcone()" class="color-coded button button-xs pull-left"/>
    		</div>
-		<div class="col-md-6 col-sm-12 col-xs-12">
+		<div class="col-md-4 col-sm-12 col-xs-12">
    			<input type="button" value="Reset" ng-click="reset()" class="color-coded button button-xs pull-right"/>
    		</div>
    </div>
