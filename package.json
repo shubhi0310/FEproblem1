@@ -1,0 +1,26 @@
+{
+  "name": "feproblem1",
+  "version": "1.0.0",
+  "description": "This application is to help King Shan find Al Falcone.",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubhi0310/FEproblem1.git"
+  },
+  "keywords": [
+    "FEproblem1",
+    "feproblem"
+  ],
+  "author": "Shubhangi Garg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shubhi0310/FEproblem1/issues"
+  },
+  "homepage": "https://github.com/shubhi0310/FEproblem1#readme"
+}
