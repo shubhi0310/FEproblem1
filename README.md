@@ -15,14 +15,11 @@ Through FEproblem1, King Shan can
 - show final result of success or failure
 
 # How to deploy application locally
-
-- Install http-server using this cmd: npm install -g http-server
-- After installation cd into your project folder 
-- Run http-server -o. (-o is to open browser to the page.)
-
-# Production URL to access application.
-- If you do not want to build and deploy application locally, but still want to see application. Then below is the URL for the same:
-https://fe-problem.netlify.com
+- Install nodejs server into your machine using [NodeJs official site](https://nodejs.org/en/download/)
+- Clone the project into your local.
+- Open command prompt and go inside your project where **package.json** file is located.
+- Run command **npm install** which will install all the dependencies for your project.
+- After that, run cmd **npm start** which will automatically open the browser. You should see the UI.
 
 
 
