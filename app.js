@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular
-        .module('falconeApp', ['ngRoute','angularModalService'])
+        .module('falconeApp', ['ngRoute'])
         .config(['$routeProvider',
 		 function($routeProvider) {
           $routeProvider
